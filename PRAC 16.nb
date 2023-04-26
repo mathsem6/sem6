@@ -1,0 +1,408 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12382,        398]
+NotebookOptionsPosition[     11143,        349]
+NotebookOutlinePosition[     11522,        365]
+CellTagsIndexPosition[     11479,        362]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PRACTICAL- 16", "Title",
+ CellChangeTimes->{{3.8910577934432077`*^9, 3.8910578268539457`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" HARIOM (20201022)", "Subchapter",
+ CellChangeTimes->{{3.891057810007763*^9, 3.891057819134423*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Locate the zeros and poles of g(z) = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Pi]", " ", 
+     RowBox[{"cot", "(", 
+      RowBox[{"\[Pi]", " ", "z"}], ")"}]}], 
+    SuperscriptBox["z", "2"]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  and determine their order. Also , justify that Res(g,0) = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", 
+    SuperscriptBox["\[Pi]", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "/3"
+}], "Subsection",
+ CellChangeTimes->{{3.891057840374379*^9, 3.8910580290187106`*^9}, {
+  3.8910586795392013`*^9, 3.891058701450033*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["ClearAll"], "Input",
+ CellChangeTimes->{{3.891059204207301*^9, 3.8910592173461046`*^9}}],
+
+Cell[BoxData["ClearAll"], "Output",
+ CellChangeTimes->{3.8910592183969917`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "z_", "]"}], ":=", " ", 
+   FractionBox[
+    FormBox[
+     RowBox[{"\[Pi]", " ", 
+      RowBox[{"cot", "(", 
+       RowBox[{"\[Pi]", " ", "z"}], ")"}]}],
+     TraditionalForm], 
+    SuperscriptBox["z", "2"]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The given function is g(z) =\>\"", ",", 
+    RowBox[{"g", "[", "z", "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The zeros of the function g are \>\"", ",", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{"Reduce", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"g", "[", "z", "]"}], "\[Equal]", "0"}], ",", "z"}], "]"}], 
+     "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<g'[\!\(\*FractionBox[\(1\), \(2\)]\)+C[1]] =\>\"", ",", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"g", "'"}], "[", 
+       RowBox[{
+        FractionBox["1", "2"], "+", 
+        RowBox[{"C", "[", "1", "]"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"C", "[", "1", "]"}], "\[Element]", "Integers"}]}], "]"}]}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "Print", "[", "\"\<The function g has a simple zero at z=1/2\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Simplify", "[", 
+   RowBox[{"Reduce", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"z", "^", "2"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"Pi", " ", "z"}], "]"}]}], "\[Equal]", "0"}], ",", "z"}], 
+    "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The minimum power of\>\"", ",", 
+    RowBox[{"z", "-", "1"}], ",", 
+    "\"\<in the Laurent Series expansion of the function g about the point \>\
+\"", ",", "1", ",", "\"\<is\>\"", ",", 
+    RowBox[{"Exponent", "[", 
+     RowBox[{
+      RowBox[{"Series", "[", 
+       RowBox[{
+        RowBox[{"g", "[", "z", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"z", ",", "1", ",", "5"}], "}"}]}], "]"}], ",", 
+      RowBox[{"z", "-", "1"}], ",", "Min"}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<The minimum power of\>\"", ",", "z", ",", 
+    "\"\<in the Laurent Series expansion of the function g about the \
+point\>\"", ",", "0", ",", "\"\<is\>\"", ",", 
+    RowBox[{"Exponent", "[", 
+     RowBox[{
+      RowBox[{"Series", "[", 
+       RowBox[{
+        RowBox[{"g", "[", "z", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"z", ",", "0", ",", "5"}], "}"}]}], "]"}], ",", "z", ",", 
+      "Min"}], "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<The function g has a pole of order 3 at 0 and residue of g at z=0 is\>\
+\"", ",", 
+   RowBox[{"Residue", "[", 
+    RowBox[{
+     RowBox[{"g", "[", "z", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", "0"}], "}"}]}], "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8910580335440474`*^9, 3.891058070328495*^9}, {
+  3.891058112340476*^9, 3.8910582663539577`*^9}, {3.8910583120012527`*^9, 
+  3.8910584583230543`*^9}, {3.891058568127659*^9, 3.8910585808519683`*^9}, {
+  3.891058629531864*^9, 3.8910591921248083`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The given function is g(z) =\"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{"\[Pi]", " ", 
+     RowBox[{"Cot", "[", 
+      RowBox[{"\[Pi]", " ", "z"}], "]"}]}], 
+    SuperscriptBox["z", "2"]]}],
+  SequenceForm[
+  "The given function is g(z) =", Pi $CellContext`z^(-2) 
+   Cot[Pi $CellContext`z]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8910592218709936`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The zeros of the function g are \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"C", "[", "1", "]"}], "\[Element]", "Integers"}], "&&", 
+    RowBox[{"z", "\[NotEqual]", "0"}], "&&", 
+    RowBox[{"z", "\[Equal]", 
+     RowBox[{
+      FractionBox["1", "2"], "+", 
+      RowBox[{"C", "[", "1", "]"}]}]}]}]}],
+  SequenceForm["The zeros of the function g are ", 
+   And[
+    Element[
+     C[1], Integers], $CellContext`z != 0, $CellContext`z == 
+    Rational[1, 2] + C[1]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8910592219345975`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "With","lvlist",
+   "\"Local variable specification \\!\\(\\*RowBox[{SuperscriptBox[\\\"g\\\", \
+\\\"\[Prime]\\\", Rule[MultilineFunction, None]], \\\"[\\\", \
+RowBox[{FractionBox[\\\"1\\\", \\\"2\\\"], \\\"+\\\", RowBox[{\\\"C\\\", \
+\\\"[\\\", \\\"1\\\", \\\"]\\\"}]}], \\\"]\\\"}]\\) is not a List.\"",2,23,1,
+   28584904766348209518,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8910592219595556`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"g'[\\!\\(\\*FractionBox[\\(1\\), \\(2\\)]\\)+C[1]] =\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["g", "\[Prime]",
+       MultilineFunction->None], "[", 
+      RowBox[{
+       FractionBox["1", "2"], "+", 
+       RowBox[{"C", "[", "1", "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"C", "[", "1", "]"}], "\[Element]", "Integers"}]}], "]"}]}],
+  SequenceForm["g'[\!\(\*FractionBox[\(1\), \(2\)]\)+C[1]] =", 
+   With[
+    Derivative[1][$CellContext`g][1/2 + C[1]], 
+    Element[
+     C[1], Integers]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.891059221997408*^9}],
+
+Cell[BoxData["\<\"The function g has a simple zero at z=1/2\"\>"], "Print",
+ CellChangeTimes->{3.891059221997408*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\"in the Laurent Series expansion of the function \
+g about the point \"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"is\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of", -1 + $CellContext`z, 
+   "in the Laurent Series expansion of the function g about the point ", 1, 
+   "is", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.891059221997408*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of\"\>", "\[InvisibleSpace]", "z", 
+   "\[InvisibleSpace]", "\<\"in the Laurent Series expansion of the function \
+g about the point\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"is\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3"}]}],
+  SequenceForm[
+  "The minimum power of", $CellContext`z, 
+   "in the Laurent Series expansion of the function g about the point", 0, 
+   "is", -3],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.891059221997408*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The function g has a pole of order 3 at 0 and residue of g at \
+z=0 is\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox[
+     SuperscriptBox["\[Pi]", "2"], "3"]}]}],
+  SequenceForm[
+  "The function g has a pole of order 3 at 0 and residue of g at z=0 is", 
+   Rational[-1, 3] Pi^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.891059221997408*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Reduce", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"z", "^", "2"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"Pi", " ", "z"}], "]"}]}], "\[Equal]", "0"}], ",", "z"}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.891059238378485*^9, 3.8910592733604517`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"C", "[", "1", "]"}], "\[Element]", "Integers"}], "&&", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"z", "\[Equal]", 
+       RowBox[{"2", " ", 
+        RowBox[{"C", "[", "1", "]"}]}]}], "||", 
+      RowBox[{"z", "\[Equal]", 
+       RowBox[{"1", "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"C", "[", "1", "]"}]}]}]}]}], ")"}]}], ")"}], "||", 
+  RowBox[{"z", "\[Equal]", "0"}]}]], "Output",
+ CellChangeTimes->{3.891059274285426*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<The minimum power of \>\"", ",", 
+   RowBox[{"z", "-", "2"}], ",", 
+   "\"\< in the Laurent Series expansion of the function g about the point \>\
+\"", ",", "2", ",", "\"\< is \>\"", ",", 
+   RowBox[{"Exponent", "[", 
+    RowBox[{
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{"g", "[", "z", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"z", ",", "2", ",", "5"}], "}"}]}], "]"}], ",", 
+     RowBox[{"z", "-", "2"}], ",", "Min"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8910592814067445`*^9, 3.8910594430330915`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "2"}], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\" in the Laurent Series expansion of the function \
+g about the point \"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\" is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of ", -2 + $CellContext`z, 
+   " in the Laurent Series expansion of the function g about the point ", 2, 
+   " is ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8910594008450565`*^9, {3.891059435926324*^9, 3.8910594438558683`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 100, 1, 127, "Title"],
+Cell[CellGroupData[{
+Cell[705, 27, 106, 1, 83, "Subchapter"],
+Cell[CellGroupData[{
+Cell[836, 32, 621, 19, 66, "Subsection"],
+Cell[CellGroupData[{
+Cell[1482, 55, 102, 1, 37, "Input"],
+Cell[1587, 58, 79, 1, 37, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1703, 64, 3271, 92, 282, "Input"],
+Cell[CellGroupData[{
+Cell[4999, 160, 428, 12, 45, "Print"],
+Cell[5430, 174, 611, 17, 44, "Print"]
+}, Open  ]],
+Cell[6056, 194, 462, 9, 48, "Message"],
+Cell[CellGroupData[{
+Cell[6543, 207, 684, 20, 44, "Print"],
+Cell[7230, 229, 117, 1, 28, "Print"],
+Cell[7350, 232, 589, 14, 28, "Print"],
+Cell[7942, 248, 538, 12, 28, "Print"],
+Cell[8483, 262, 415, 11, 47, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8947, 279, 338, 10, 37, "Input"],
+Cell[9288, 291, 517, 16, 37, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9842, 312, 596, 14, 37, "Input"],
+Cell[10441, 328, 650, 15, 28, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

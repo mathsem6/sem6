@@ -1,0 +1,264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8863,        254]
+NotebookOptionsPosition[      8175,        225]
+NotebookOutlinePosition[      8523,        240]
+CellTagsIndexPosition[      8480,        237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Practical 9", "Title",
+ CellChangeTimes->{{3.8907097525974054`*^9, 3.8907097557319255`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" HARIOM (20201022)", "Subchapter",
+ CellChangeTimes->{{3.8907097642521715`*^9, 3.890709772583146*^9}}],
+
+Cell[TextData[{
+ "Plot the segment \[OpenCurlyQuote]L\[CloseCurlyQuote] joining the point A = \
+0 to B = 2 + i(\[DoubledPi]/4) and give an exact calculation of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Integral]", "L"], 
+    RowBox[{
+     SuperscriptBox["e", "z"], 
+     RowBox[{"\[DifferentialD]", "z"}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.8598661487290583`*^9, 3.859866311125341*^9}, {
+  3.859867105861082*^9, 3.859867198182043*^9}, {3.8598682469804597`*^9, 
+  3.8598683382876644`*^9}, {3.859942058983389*^9, 3.859942238489703*^9}, {
+  3.859942873285816*^9, 3.859942917327693*^9}, {3.859942959609767*^9, 
+  3.859943059537343*^9}},
+ TextAlignment->AlignmentMarker,
+ FontFamily->"Cambria",
+ FontSize->16,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w1", ":=", "0"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"w2", ":=", 
+     RowBox[{"2", "+", 
+      RowBox[{"I", "*", 
+       RowBox[{"Pi", "/", "4"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"z", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "t"}], ")"}], "*", "w1"}], "+", 
+      RowBox[{"t", "*", "w2"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Print", "[", "\"\<The parameterization of L is given by\>\"", "]"}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<L:z(t)=\>\"", ",", 
+      RowBox[{"z", "[", "t", "]"}], ",", 
+      "\"\< , 0\[LessSlantEqual]t\[LessSlantEqual]1\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", "\"\<The plot of the segment L is given by the figure\>\"", 
+    "]"}], "\[IndentingNewLine]", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Re", "[", 
+        RowBox[{"z", "[", "t", "]"}], "]"}], ",", 
+       RowBox[{"Im", "[", 
+        RowBox[{"z", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"Thick", ",", "Red"}], "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "z_", "]"}], ":=", 
+     RowBox[{"Exp", "[", "z", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<\!\(TraditionalForm\`\*SubscriptBox[\(\[Integral]\), \
+\(L\)]\*SuperscriptBox[\(e\), \(z\)] \[DifferentialD]z\)=\>\"", ",", " ", 
+     RowBox[{"ComplexExpand", "[", 
+      RowBox[{"Integrate", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"z", "[", "t", "]"}], "]"}], 
+         RowBox[{
+          RowBox[{"z", "'"}], "[", "t", "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}], "]"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.859942245868516*^9, 3.859942391694971*^9}, {
+  3.8599424384028535`*^9, 3.859942774620843*^9}, {3.859943114026039*^9, 
+  3.8599433440486474`*^9}, {3.859943383071316*^9, 3.859943427647594*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"The parameterization of L is given by\"\>"], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8599434332334037`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"L:z(t)=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "+", 
+      FractionBox[
+       RowBox[{"\[ImaginaryI]", " ", "\[Pi]"}], "4"]}], ")"}], " ", "t"}], 
+   "\[InvisibleSpace]", "\<\" , 0\[LessSlantEqual]t\[LessSlantEqual]1\"\>"}],
+  SequenceForm["L:z(t)=", (2 + Complex[0, 
+       Rational[1, 4]] Pi) $CellContext`t, 
+   " , 0\[LessSlantEqual]t\[LessSlantEqual]1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8599434332334037`*^9}],
+
+Cell[BoxData["\<\"The plot of the segment L is given by the figure\"\>"], \
+"Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8599434332334037`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   TagBox[
+    {RGBColor[1, 0, 0], Thickness[Large], Opacity[1.], FaceForm[Opacity[0.3]],
+      LineBox[CompressedData["
+1:eJxd1P1T0wUABvCxSSIIyU6H6IEuCKVSfCuT8B4kEhGnboLiSSiDkHnxIoiI
+ygGG5MvUiejsRAIcE8FICtLDRVMWgS+8bOJgvI0x2feLE4YgIgO+1bWfeu6e
+e+7zDzxsfjzvGzqNRuP803/3/+GbWQ3fO/uj6UiBMDfHC/852GJYHGXxNosP
+WbzX4iyL4y3OtTjdYonFF9DA20EzDVfisfRaxoakAqSNr/5po+sfoIX9qP4l
+oQTdnICLtWcV+MzzfCDd7Q5WPM4xiEcbcH13okLKr0TznQPZVlZN4BW4yqp2
+3wMzIqGgyUcJ7zzTdnmxDK5kw1Co8RnC86izXXFycIsFfbdj1fjrzcAyUfRD
+hKe06Rd8qEG9pyBffkqBnLRzZ3aUd2I4Jogjza7DUkZEUd1HPdg/HjQv62g9
+OE1W+luDWhzh95T1XH0E57Vj9a0rdPhZ/TzDlPMESk9lpcP5PmQsiXBPv9sI
+n7Df2/V6PZr6skx0QTOqSx5vL3DvR+I6u8HFUS1wz3jQGJNuwL5JjTLtkBJF
+BzX5rFoCfYrOnVWJKtgPapJb2AP4dWLJw4+zn8GzdOCk59GXKAmle+fntmJ3
+hgsRfd+IVTIH7kvRcyT3ruVWOA3C5lzUtpQiNYrDkmf3hg0hMdJo7CpsQ61d
+BE3NMYHOZ4h989pRutw8VTthQs/TyKW6Mg2udUslbnnD4GIsNPxWB+jBdY2z
+gl7D3lWZ4CzrhJ8g9nLN2GsMu6+/3NzQBaGdh3X/lREcWKkJ5f/ZjS1JvPFL
+/qNYXiZnrH7eA1aMKLeyfxRfXjZ6xB/Q4t5kyNMbJ9+ALvBV+hm0aNl54bTz
+qjHEjHw+XBXXi5H1mkEr1RjEGY/2sl71QjhwVZ2Q+RbfKmh+rMM6eLkLBDz3
+ccy2a05ijOlQOiUX0xXjqHnRXxaX1Ie8PGHguoPv4JRStCvV3AdxvUCiY07A
+2+4t7+BRPWZVV59gPpwAY6fpgc2MFwgOujQ1J84M7ZqVa13PvkCJII19wmES
+2Sy7ycWz+pHE6ahPlU1CVX56Te3FfgTUbHbWh0+BDCyU8RwNGG3c8J7L9BSY
+qbSgfecNcCq+fbizdBq68BkcexYBfxtPkcMWCscCCvNv5hJwiyJCurdSYKpS
+XnVeIUCX31xYzqVQEr7Vh/kDAXmKx03OLgqtyeb249cJ+BjcaoR8Cl6SkHk8
+KYHVda5G21QKOpqtcPIugQ+y5m6aKaWwuToxldtBwEqrsleXUNB+FVif3UVA
++8UllbSMQkrLIidZD4H8Ece9GysoSIgnlR56Agsi3z98UkZhmrXEZDYScPSz
+lTBUFCqSOqKl0wRM1xsEqlYKAVRFVQeNROO7U1432ih0nTk1w5FBQlgx875f
+NwXbok+Ljs0kYcO2VmaSFKKaL3Rtn0PCcFwh5hopmPdEf5LNJFHX9t3X7CEK
+Fw0+x+7PJZElopPyUQo10+R8D2cSkcYH5aK3FELOyPfvWUjCb1PmoX0TFF7O
+E/8mciHBlvh6r5iicKIw1rpuEQnLbfnOX+YfbGaT+BvNynHw
+      "]]},
+    Annotation[#, "Charting`Private`Tag$2469#1"]& ]},
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["x", TraditionalForm], 
+    FormBox["y", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"ScalingFunctions" -> None},
+  PlotRange->{{0., 2.}, {0., 0.7853981633974483}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.05], 
+     Scaled[0.05]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8599427777252483`*^9, 3.859943433280204*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(TraditionalForm\\`\\*SubscriptBox[\\(\[Integral]\\), \
+\\(L\\)]\\*SuperscriptBox[\\(e\\), \\(z\\)] \[DifferentialD]z\\)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "\[ImaginaryI]"}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", "2"]}], 
+     SqrtBox["2"]]}]}],
+  SequenceForm[
+  "\!\(TraditionalForm\`\*SubscriptBox[\(\[Integral]\), \
+\(L\)]\*SuperscriptBox[\(e\), \(z\)] \[DifferentialD]z\)=", -1 + (
+     Complex[1, 1] 2^Rational[-1, 2]) E^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.859943434031005*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 98, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[703, 27, 108, 1, 67, "Subchapter"],
+Cell[814, 30, 766, 19, 37, "Text"],
+Cell[CellGroupData[{
+Cell[1605, 53, 2478, 68, 220, "Input"],
+Cell[CellGroupData[{
+Cell[4108, 125, 139, 1, 22, "Print"],
+Cell[4250, 128, 544, 13, 40, "Print"],
+Cell[4797, 143, 152, 2, 22, "Print"]
+}, Open  ]],
+Cell[4964, 148, 2457, 52, 179, "Output"],
+Cell[7424, 202, 711, 18, 46, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

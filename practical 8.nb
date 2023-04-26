@@ -1,0 +1,405 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14493,        395]
+NotebookOptionsPosition[     13657,        361]
+NotebookOutlinePosition[     14005,        376]
+CellTagsIndexPosition[     13962,        373]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PRACTICAL 8", "Title",
+ CellChangeTimes->{{3.890709095103504*^9, 3.890709101001718*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" HARIOM (20201022)", "Subchapter",
+ CellChangeTimes->{{3.890709110070657*^9, 3.890709124271035*^9}}],
+
+Cell[TextData[{
+ "Find a parameterization of the polynomial of the polygon path C = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "1"], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "2"], TraditionalForm]]],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "3"], TraditionalForm]]],
+ " from -1 + i to 3 - i where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "1"], TraditionalForm]]],
+ " is the line from -1 + i to -1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "2"], TraditionalForm]]],
+ " is the line from -1 to 1 + i and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "3"], TraditionalForm]]],
+ " is the line from 1 + i to 3 - i. Make a plot of this path."
+}], "Text",
+ CellChangeTimes->{{3.8598661487290583`*^9, 3.859866311125341*^9}, {
+  3.859867105861082*^9, 3.859867198182043*^9}, {3.8598682469804597`*^9, 
+  3.8598683382876644`*^9}, {3.859942058983389*^9, 3.859942238489703*^9}, {
+  3.859949957079619*^9, 3.8599499575320196`*^9}},
+ TextAlignment->AlignmentMarker,
+ FontFamily->"Cambria",
+ FontSize->16,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["ClearAll"], "Input",
+ CellChangeTimes->{{3.8907096077654457`*^9, 3.890709612806531*^9}}],
+
+Cell[BoxData["ClearAll"], "Output",
+ CellChangeTimes->{3.8907096139506025`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w1", ":=", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "I"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"w2", ":=", 
+     RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"w3", ":=", 
+     RowBox[{"1", "+", "I"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"w4", ":=", 
+     RowBox[{"3", "-", "I"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"z1", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "t"}], ")"}], "*", "w1"}], "+", 
+      RowBox[{"t", "*", "w2"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"z2", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "t"}], ")"}], "*", "w2"}], "+", 
+      RowBox[{"t", "*", "w3"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"z3", "[", "t_", "]"}], ":=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "t"}], ")"}], "*", "w3"}], "+", 
+      RowBox[{"t", "*", "w4"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Print", "[", 
+     "\"\<The parameterizations of \!\(\*SubscriptBox[\(C\), \(1\)]\), \
+\!\(\*SubscriptBox[\(C\), \(2\)]\) and \!\(\*SubscriptBox[\(C\), \(3\)]\) are \
+given by\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\!\(\*SubscriptBox[\(C\), \(1\)]\):\!\(\*SubscriptBox[\(z\), \(1\)]\
+\)(t)=\>\"", ",", 
+      RowBox[{"z1", "[", "t", "]"}], ",", 
+      "\"\< , 0\[LessSlantEqual]t\[LessSlantEqual]1\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\!\(\*SubscriptBox[\(C\), \(2\)]\):\!\(\*SubscriptBox[\(z\), \(2\)]\
+\)(t)=\>\"", ",", 
+      RowBox[{"z2", "[", "t", "]"}], ",", 
+      "\"\< , 0\[LessSlantEqual]t\[LessSlantEqual]1\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\!\(\*SubscriptBox[\(C\), \(3\)]\):\!\(\*SubscriptBox[\(z\), \(3\)]\
+\)(t)=\>\"", ",", 
+      RowBox[{"z3", "[", "t", "]"}], ",", 
+      "\"\< , 0\[LessSlantEqual]t\[LessSlantEqual]1\>\""}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<The path of the polygonal path C is given by the figure\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Re", "[", 
+          RowBox[{"z1", "[", "t", "]"}], "]"}], ",", 
+         RowBox[{"Im", "[", 
+          RowBox[{"z1", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Re", "[", 
+          RowBox[{"z2", "[", "t", "]"}], "]"}], ",", 
+         RowBox[{"Im", "[", 
+          RowBox[{"z2", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Re", "[", 
+          RowBox[{"z3", "[", "t", "]"}], "]"}], ",", 
+         RowBox[{"Im", "[", 
+          RowBox[{"z3", "[", "t", "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Blue", ",", "Green"}], "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.859942245868516*^9, 3.859942391694971*^9}, {
+  3.8599424384028535`*^9, 3.859942774620843*^9}, {3.8907096286830344`*^9, 
+  3.89070964370626*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"The parameterizations of \\!\\(\\*SubscriptBox[\\(C\\), \
+\\(1\\)]\\), \\!\\(\\*SubscriptBox[\\(C\\), \\(2\\)]\\) and \
+\\!\\(\\*SubscriptBox[\\(C\\), \\(3\\)]\\) are given by\"\>"], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.890709651866748*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(C\\), \
+\\(1\\)]\\):\\!\\(\\*SubscriptBox[\\(z\\), \\(1\\)]\\)(t)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "\[ImaginaryI]"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}]}], "-", "t"}], 
+   "\[InvisibleSpace]", "\<\" , 0\[LessSlantEqual]t\[LessSlantEqual]1\"\>"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(C\), \(1\)]\):\!\(\*SubscriptBox[\(z\), \(1\)]\)(t)=",
+    Complex[-1, 1] (1 - $CellContext`t) - $CellContext`t, 
+   " , 0\[LessSlantEqual]t\[LessSlantEqual]1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8907096518694296`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(C\\), \
+\\(2\\)]\\):\\!\\(\\*SubscriptBox[\\(z\\), \\(2\\)]\\)(t)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "+", "\[ImaginaryI]"}], ")"}], " ", "t"}]}], 
+   "\[InvisibleSpace]", "\<\" , 0\[LessSlantEqual]t\[LessSlantEqual]1\"\>"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(C\), \(2\)]\):\!\(\*SubscriptBox[\(z\), \
+\(2\)]\)(t)=", -1 + Complex[2, 1] $CellContext`t, 
+   " , 0\[LessSlantEqual]t\[LessSlantEqual]1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8907096518706384`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(C\\), \
+\\(3\\)]\\):\\!\\(\\*SubscriptBox[\\(z\\), \\(3\\)]\\)(t)=\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", "\[ImaginaryI]"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "-", "\[ImaginaryI]"}], ")"}], " ", "t"}]}], 
+   "\[InvisibleSpace]", "\<\" , 0\[LessSlantEqual]t\[LessSlantEqual]1\"\>"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(C\), \(3\)]\):\!\(\*SubscriptBox[\(z\), \(3\)]\)(t)=",
+    Complex[1, 1] (1 - $CellContext`t) + Complex[3, -1] $CellContext`t, 
+   " , 0\[LessSlantEqual]t\[LessSlantEqual]1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8907096518722057`*^9}],
+
+Cell[BoxData["\<\"The path of the polygonal path C is given by the \
+figure\"\>"], "Print",
+ CellChangeTimes->{3.8599427774600477`*^9, 3.8907096518722057`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   TagBox[
+    {RGBColor[1, 0, 0], AbsoluteThickness[1.6], Opacity[1.], FaceForm[Opacity[
+     0.3]], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAWIQDQEf9kNpexhfaMntBzPXv4fzVT22HzSOR/Avn/r1
+/8GGd3B+xQGdqdJ8CL6L2PXe9ry3cP6sZbzMuQffwPnPVhqdvy+P4O95/lj8
+TMFrOH9HK++Rl0dewflrpqken6KC4Gs8Oum2s+wlnD9nQYxs9pUXcL7Z/vRw
+P1MEP0riP+/qjudwfsmTFumpz5/B+eKvpy39YYHgPwpUnNzb+xTOX6w96/r6
+t0/g/Hf282d4OyD4+scnbSiZ9xjO/9Uh5Cr+/hGc/2YVl+1rJwT/iv3Hbp9F
+D+F8N/6UcPUvD+D8dYFHK/sDEfyqF7b/A1PuI8JjESdLBdc9OP+U06ZtO47f
+gfP/hBcnvcm8DefX6KpebRK6Bee/eLH5q/GlG3B+hmQ0/42y6wj36d+/Ns3o
+Gpw/gS0kdceXK3B+XNDDN2dmX4bzpVq8lf5EXkKYr3UuQO7vBUR6yI+O2pZ3
+Hs6P4Pyz4Ov7Mwjze8/elLI+BecvuRuRV7rlOJx/R1z069bvR+D8DZc2ce5x
+PwTnH9gk8uVd936Ef6ao7jSU2QXnn+BdZXqfYyucn9Dx8aw4/waE/etMp1oE
+LYXzG77f+6VbNw2N3wbnM0ABAEd8Lvk=
+      "]]},
+    Annotation[#, "Charting`Private`Tag$119371#1"]& ], 
+   TagBox[
+    {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], FaceForm[Opacity[
+     0.3]], LineBox[CompressedData["
+1:eJxFlH0w23ccx0WplmpVN6rGLfVw1dvIYZRxn8o5z1GPw9XSolTaMVo03bF6
+3HRLlXpci3MValjUnbWe6uupxJoGyZBhWRIRSUR+VvrkYV13E/nefe/9eX/u
+/X7dff/54mO/DonX1NDQIL2//+n/ZxWpJmK3fu3bDQzFbhqNfW/iCLlppm5r
+L1XeE7RkTlTJssqHgS4naZU1o/IXwJA+J/ipTeXTwNLn8YDDOZXPB7/i5LyL
+fcodXwaN5S/fDcSsoLGQUI3Vv+mwmh110vkjBcp64/CLl3kbFH7CMD30pxzx
+Sd4lQz92gCPJdO9srgwRnt1ZqlzvAlZofC0CKZp4eOk7HA4BdXzUrkooQYYx
+KXXjboOQomdayL25iMxlY1ikYhgiP/UvsvEVo+AGykJr0igEDZfeurIiQuRr
+PPExq9/glEeX63STEN3JuvVDKIMFX307zqi+JEAn9sTcHzk5Dhdjtpxbj/MR
+aRwn/lk5AeMlR5LDaueQifMr5hSBA9GtZytECzzEseF0HCziQqF3QYCT0zRy
+i37yh1j8O9AYiWT0iIu6m54F1VlOQ+e7zFhb3CSyzB5gJ96YAapLRX7DGgvd
+T52tNRriAdu77EQ3dRTpK2fTJ/GzQI4Il0YZDyKbZnmBzTdz4LZ9BDEtu1FU
+tpk0oWceOqU5Cnk+A6ULnYPbjfmQcjkslR9Xhhqi0w8Io/+C/lXi0f70UhjS
+i9GYIQng9FQ8uhHZBs22m9tDGwJ4KEvycx3sgnv8RrpFtRAM6uwzAiMHQTNs
+hL3fXwQGfpdb1n8dBSIlqbzvlQjORxNsCI9ZQNOz1pZULADhua/wjOEkBFwN
+eVPqKYbIOo8Qzl0uGCUWl3VIxCB4EfHZbaP3794Kf15fsAieZ92tE5g8mPzi
+9k0TewmwXif26ATMwZr7rBLHlQChOY48pM0HmrxqJiVnCcg+HA7dRwB2lhRK
+iKUUwjZz7LQLhdC83V+pOSyFUy4mpVdEIqiupvm6pMrAtoTr89RKDJVMCl1k
+KAfDtHRtq/xF2N/dnWs4KIemCutN/LwEwvxLtw2SlyGIu0HUMpNCEyULn3tQ
+AZK7j0rWqDK4SppjXu9VQFFmuT3ziRy8+/xMxOQVkNbkHXDdWoZ1tsdes39W
+wNYvaqUzfAWMG1oz5puVUGgQ8rFZlRI899kUHwzAwIs50dJbowSLC9JwfiAG
+WtlnnKPrlaDZ/8CUEYxBNhYQeI+hhP5r1g9IERhQ2d6ZJk+V4LZk0UeLxSCB
+5s778IUSHEbMFbrXsV3u8fwPfHQasV0OTsDVn2nCdjmCz0u5jS3YLqd27fA5
+r3YMHHc4x+IOZRT0qjmHibr0PVx1b7VmjMKdwqB6p8d+W2hXz8Pg6E6P1q7T
+Q+RjYLDT24fX5uTI1LmlzOHKYIU6N8LL+xKPqXP5xZqy/nX1Pk4xwCh+rd4T
+fXLSzm+oFU8/7UrYxmDn/9rVfwFHsnfl
+      "]]},
+    Annotation[#, "Charting`Private`Tag$119371#2"]& ], 
+   TagBox[
+    {RGBColor[0, 1, 0], AbsoluteThickness[1.6], Opacity[1.], FaceForm[Opacity[
+     0.3]], LineBox[CompressedData["
+1:eJw1lHs01HkYxscwvpKKScXqRuXQdpktSaj3yykmuSVCuTuUpItUs2UtUTud
+VKTbdnHak3DSmbazNpcu76RCNWmbKTnZdYadmBHz+zVI7tua3fec97zn/eN9
+ns95/3hs43YHJXA5HI7f1/536ouF/6fSbkCQzWXBs3pS4cAgA7hOF2vMY+FI
+mo17Tx8DGSdUj81MWTDSOIvaPzIwPP3ZT9aWLJjKU1jZOwb6F5+ZstyBBX5R
+s/Ln2wx0b50/JzGQhfnCikfLoxlorhCukV1jwSdvV/a2h1pYtILHmRPwCYrP
+9Y09iu0GMSh2qD59AjYzfOHKmV1wX+OQKsrXgXiRxGbKX52QGK4bPrOmB5z8
+bIzfH9HAN5tfCuYqe0C2KaEQQQ3rrGaql5/uBdGruqUXW9vB+5DObbpbH+yZ
+aCNWHP8AwUnvXZKb+yBs8YZTjutV8G6Wc5XX8c8Q+KTgZGp3GyREX287+20/
+uHhUuTaWtsJzerH0zvN+2JnxSnJlhxJKOji64INfYFvs8Mpbdi1w0uawaofV
+ALzKn7oruLAZNJZJW0jdAETc2nq+7e8mmC1p2ZmaOghi76O+zs6NEPUmwSGQ
+PwS5ku1ReFcBfGnMtnIcgsqx9LglBq9B7pIScCJ2GESrzufc6JEBOdhdrTYf
+gQbvsw7VojqYFtJXY/lgBKJCQ9ThM2pgsXRy2m+Ro+A+MhXr51fDPfZyadPE
+MahUZ3V15khgk8T12B7JGOxJDt7bEn8WWo8KMj/ac6iU9bSS7i/AkAsjo7E/
+cCh9m4A/ht1Gv92b5BYNHPqrJsXHtaYKDRbGd+QsMKDm15Yd8A+rwV/K7/pE
+H/66+ySX9f5eh7W8Au6+FwY0JkLgKKiQYfEqx+H1dlwqeLm+NYD/Gic6CX22
+7OPSsGseQfJLCowYvdn+uoZLlbrQFaenN2JSWd0TM2tDunbravvE+iYcmJ3S
+n5lkSGX92+8R32b02i9LrpQaUsHN+KjHvBaccabcyZFvRKOEcnmRUImNGcoN
+BnFGNHgoaylP3Ir+/rVFVyqNqMsq64LUtjbcoHIK2juBR5fkK4RPF6iQFxnp
+MSGWR/lp+3kLcj7gzRvPMkwqeLT0vP2Q7Z/t+Kb8obkHMaaBikFPo1lqrCpO
+UblHGdP2S3fze0QanBd9wyz1tjE9lX5uWf2DTjzUMTd78pgxVV/NNnMd/ogn
+gja77QohdIlPeHdlSDfa5VgKSTGhYvOgubMuatFiWe/C3SWEetX/UXb/qha5
+SsWkd6WEGmUGrIy4rkWlW4GiuIzQTMbX/7JEi4U9FtFedwgVNXinWz/VonX8
+lANH7xOamLu6aZpOi3xP0yJDBaFrTRzzJvsyaMBqjiW/IZQrLbGRbGSQvfos
+SfGWUOlB+xK/UAYbBsRLrzcR6t4x72FuHIOn7pB7ni2EOtXO7jL9nsEJtjx5
+loZQPTeDXxpU5ZpOQvVcDLanP7mwsYvQK+NcDNY2ZUfaMoRajXMxmJPH1Uh7
+CTUf52Jw35q2Fw6fCdX7MhjX9UiS109o7rgvg57CrLSYQUJNxn0Z/O5zTGj9
+EKF6XQbtiqirYIRQvS6DFv++cZRQ/R2D+twyof/lF/4D0H9WXA==
+      "]]},
+    Annotation[#, "Charting`Private`Tag$119371#3"]& ]},
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["x", TraditionalForm], 
+    FormBox["y", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"ScalingFunctions" -> None},
+  PlotRange->{{-1., 3.}, {-1., 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.05], 
+     Scaled[0.05]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8599427777252483`*^9, 3.8907096518958015`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 94, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[699, 27, 106, 1, 67, "Subchapter"],
+Cell[808, 30, 1082, 34, 33, "Text"],
+Cell[CellGroupData[{
+Cell[1915, 68, 102, 1, 30, "Input"],
+Cell[2020, 71, 79, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2136, 77, 3704, 106, 278, "Input"],
+Cell[CellGroupData[{
+Cell[5865, 187, 275, 3, 22, "Print"],
+Cell[6143, 192, 745, 18, 22, "Print"],
+Cell[6891, 212, 668, 16, 22, "Print"],
+Cell[7562, 230, 826, 20, 22, "Print"],
+Cell[8391, 252, 159, 2, 22, "Print"]
+}, Open  ]],
+Cell[8565, 257, 5052, 99, 208, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

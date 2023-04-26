@@ -1,0 +1,456 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15772,        446]
+NotebookOptionsPosition[     14775,        408]
+NotebookOutlinePosition[     15123,        423]
+CellTagsIndexPosition[     15080,        420]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PRACTICAL - 12 ", "Title",
+ CellChangeTimes->{{3.8910562844134946`*^9, 3.891056295822435*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" HARIOM (20201022)", "Subchapter",
+ CellChangeTimes->{{3.891056306314293*^9, 3.891056315769025*^9}}],
+
+Cell[TextData[{
+ "Use ML-inequality to show that |",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Integral]", "C"], 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"(", 
+       RowBox[{"z", "^", "2"}], ")"}]], 
+     RowBox[{"\[DifferentialD]", "z"}]}]}], TraditionalForm]]],
+ "| ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[LessEqual]", 
+    FractionBox["1", 
+     RowBox[{"2", 
+      FormBox[
+       SqrtBox["5"],
+       TraditionalForm]}]]}], TraditionalForm]]],
+ "  where C is the straight line - segment from 2 to 2 + i. While solving, \
+represent the distance from the point z to the points i and -i respectively \
+i.e. |z+i| and |z-i| on the complex - plane C."
+}], "Text",
+ CellChangeTimes->{{3.8598661487290583`*^9, 3.859866311125341*^9}, {
+   3.859867105861082*^9, 3.859867198182043*^9}, {3.8598682469804597`*^9, 
+   3.8598683382876644`*^9}, {3.859942058983389*^9, 3.859942238489703*^9}, {
+   3.859942873285816*^9, 3.859942917327693*^9}, {3.859942959609767*^9, 
+   3.859943059537343*^9}, {3.8599501334259863`*^9, 3.8599501972462196`*^9}, {
+   3.8599504052500305`*^9, 3.8599506045395823`*^9}, 3.8599508306775007`*^9, {
+   3.8599509135764637`*^9, 3.859950952151836*^9}, {3.859951050363448*^9, 
+   3.8599510933608303`*^9}, 3.859951153044535*^9},
+ TextAlignment->AlignmentMarker,
+ FontFamily->"Cambria",
+ FontSize->16,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["ClearAll"], "Input",
+ CellChangeTimes->{{3.891056345760786*^9, 3.891056357892652*^9}}],
+
+Cell[BoxData["ClearAll"], "Output",
+ CellChangeTimes->{3.8910563594361687`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"w1", ":=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w2", ":=", 
+   RowBox[{"2", "+", "I"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"z", "[", "t_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}], "*", "w1"}], "+", 
+    RowBox[{"t", "*", "w2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L", ":=", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"Abs", "[", 
+      RowBox[{
+       RowBox[{"z", "'"}], "[", "t", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "Print", "[", 
+   "\"\<The Parametrization of the line segment C is given by\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<C: z(t)=\>\"", ",", 
+    RowBox[{"z", "[", "t", "]"}], ",", 
+    "\"\<, 0\[LessEqual]t\[LessEqual]1\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<The length of the contour C is given by \[Integral]|z'(t)|\
+\[DifferentialD]t = \>\"", ",", "L"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "z_", "]"}], ":=", 
+   RowBox[{"1", "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"z", "^", "2"}], "+", "1"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "Print", "[", 
+   "\"\<Let us write f(z) as \!\(\*FractionBox[\(1\), \(\((z + i)\) \((z - i)\
+\)\)]\) and compute the maximum of the absolute values of \
+\!\(\*FractionBox[\(1\), \(z - i\)]\) and \!\(\*FractionBox[\(1\), \(z + i\)]\
+\) on the contour C\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M1", ":=", 
+   RowBox[{"MaxValue", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ComplexExpand", "[", 
+        RowBox[{"Abs", "[", 
+         RowBox[{"ComplexExpand", "[", 
+          FractionBox["1", 
+           RowBox[{
+            RowBox[{"z", "[", "t", "]"}], "-", "I"}]], "]"}], "]"}], "]"}], 
+       ",", 
+       RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", "1"}]}], "}"}], ",", 
+     "t"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M2", ":=", 
+   RowBox[{"MaxValue", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ComplexExpand", "[", 
+        RowBox[{"Abs", "[", 
+         RowBox[{"ComplexExpand", "[", 
+          FractionBox["1", 
+           RowBox[{
+            RowBox[{"z", "[", "t", "]"}], "+", "I"}]], "]"}], "]"}], "]"}], 
+       ",", 
+       RowBox[{"0", "\[LessEqual]", "t", "\[LessEqual]", "1"}]}], "}"}], ",", 
+     "t"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"M", ":=", 
+  RowBox[{"M1", "*", "M2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<The maximum of the absolute value of the \!\(\*FractionBox[\(1\), \(z \
+- i\)]\) on C is \>\"", ",", "M1"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<The maximum of the absolute value of the \!\(\*FractionBox[\(1\), \(z \
++ i\)]\) on C is \>\"", ",", "M2"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<|f(z)|\[LessEqual]\>\"", ",", 
+    RowBox[{"M1", "*", "M2"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<Using ML-Inequality we get |\!\(\*SubscriptBox[\(\[Integral]\), \
+\(C\)]\)f(z)\[DifferentialD]z|\[LessEqual]\>\"", ",", 
+    RowBox[{"M1", "*", "M2", "*", "L"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ParametricPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Re", "[", 
+          RowBox[{"z", "[", "t", "]"}], "]"}], ",", 
+         RowBox[{"Im", "[", 
+          RowBox[{"z", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Red"}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", "2"}]}], "]"}], ",", 
+     RowBox[{"ListLinePlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Re", "[", 
+              RowBox[{"z", "[", "t", "]"}], "]"}], ",", 
+             RowBox[{"Im", "[", 
+              RowBox[{"z", "[", "t", "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", 
+             RowBox[{"-", "1"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Re", "[", 
+              RowBox[{"z", "[", "t", "]"}], "]"}], ",", 
+             RowBox[{"Im", "[", 
+              RowBox[{"z", "[", "t", "]"}], "]"}]}], "}"}]}], "}"}]}], "}"}], 
+       ",", 
+       RowBox[{"AxesOrigin", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8598577140651197`*^9, 3.8598579052746534`*^9}, {
+   3.859857987096796*^9, 3.8598583773938766`*^9}, {3.859858491664076*^9, 
+   3.859858695852832*^9}, {3.859858728581689*^9, 3.8598589830181327`*^9}, {
+   3.8598590247170053`*^9, 3.85985907327989*^9}, {3.859859105993147*^9, 
+   3.8598592158017387`*^9}, {3.859859248296595*^9, 3.8598594212228966`*^9}, {
+   3.859859523481075*^9, 3.8598595267570806`*^9}, {3.8598596024952126`*^9, 
+   3.859859604585616*^9}, {3.8598596382816753`*^9, 3.859859639779278*^9}, 
+   3.8598599085053463`*^9, 3.859859966319047*^9, 3.859860146343361*^9, {
+   3.8598601903822374`*^9, 3.859860193065442*^9}, {3.859951167890205*^9, 
+   3.8599511707368197`*^9}, 3.8599513081087723`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"The Parametrization of the line segment C is given \
+by\"\>"], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.891056362965429*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"C: z(t)=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "+", "\[ImaginaryI]"}], ")"}], " ", "t"}]}], 
+   "\[InvisibleSpace]", "\<\", 0\[LessEqual]t\[LessEqual]1\"\>"}],
+  SequenceForm[
+  "C: z(t)=", 2 (1 - $CellContext`t) + Complex[2, 1] $CellContext`t, 
+   ", 0\[LessEqual]t\[LessEqual]1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.8910563629669876`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The length of the contour C is given by \[Integral]|z'(t)|\
+\[DifferentialD]t = \"\>", "\[InvisibleSpace]", "1"}],
+  SequenceForm[
+  "The length of the contour C is given by \
+\[Integral]|z'(t)|\[DifferentialD]t = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.891056362977324*^9}],
+
+Cell[BoxData["\<\"Let us write f(z) as \\!\\(\\*FractionBox[\\(1\\), \\(\\((z \
++ i)\\) \\((z - i)\\)\\)]\\) and compute the maximum of the absolute values \
+of \\!\\(\\*FractionBox[\\(1\\), \\(z - i\\)]\\) and \
+\\!\\(\\*FractionBox[\\(1\\), \\(z + i\\)]\\) on the contour C\"\>"], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.891056362979643*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The maximum of the absolute value of the \\!\\(\\*FractionBox[\
+\\(1\\), \\(z - i\\)]\\) on C is \"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"]}],
+  SequenceForm[
+  "The maximum of the absolute value of the \!\(\*FractionBox[\(1\), \(z - \
+i\)]\) on C is ", 
+   Rational[1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.891056363091508*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The maximum of the absolute value of the \\!\\(\\*FractionBox[\
+\\(1\\), \\(z + i\\)]\\) on C is \"\>", "\[InvisibleSpace]", 
+   FractionBox["1", 
+    SqrtBox["5"]]}],
+  SequenceForm[
+  "The maximum of the absolute value of the \!\(\*FractionBox[\(1\), \(z + \
+i\)]\) on C is ", 5^Rational[-1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.8910563631076527`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"|f(z)|\[LessEqual]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", 
+    RowBox[{"2", " ", 
+     SqrtBox["5"]}]]}],
+  SequenceForm["|f(z)|\[LessEqual]", Rational[1, 2] 5^Rational[-1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.8910563631233225`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Using ML-Inequality we get |\\!\\(\\*SubscriptBox[\\(\
+\[Integral]\\), \\(C\\)]\\)f(z)\[DifferentialD]z|\[LessEqual]\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", 
+    RowBox[{"2", " ", 
+     SqrtBox["5"]}]]}],
+  SequenceForm[
+  "Using ML-Inequality we get |\!\(\*SubscriptBox[\(\[Integral]\), \
+\(C\)]\)f(z)\[DifferentialD]z|\[LessEqual]", Rational[1, 2] 5^Rational[-1, 2]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.859859426682906*^9, 3.859859541904707*^9, 
+  3.859859610373226*^9, 3.859860149806567*^9, 3.859951311434393*^9, 
+  3.891056363154619*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 1}}, Typeset`size$$ = {360., {179., 185.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$4210$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$4210$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        ParametricPlot[{
+          Re[
+           $CellContext`z[$CellContext`t$$]], 
+          Im[
+           $CellContext`z[$CellContext`t$$]]}, {$CellContext`t$$, 0, 1}, 
+         PlotStyle -> {Thick, Red}, PlotRange -> 2], 
+        ListLinePlot[{{{0, 1}, {
+            Re[
+             $CellContext`z[$CellContext`t$$]], 
+            Im[
+             $CellContext`z[$CellContext`t$$]]}}, {{0, -1}, {
+            Re[
+             $CellContext`z[$CellContext`t$$]], 
+            Im[
+             $CellContext`z[$CellContext`t$$]]}}}, AxesOrigin -> {0, 0}]], 
+      "Specifications" :> {{$CellContext`t$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {226., 232.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8598594388509274`*^9, 3.8598595421699076`*^9, 
+  3.859859610654027*^9, 3.8598601500873675`*^9, 3.859951316099413*^9, 
+  3.8910563632640257`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.859857659262224*^9, 3.8598577029735007`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 100, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[705, 27, 106, 1, 67, "Subchapter"],
+Cell[814, 30, 1358, 35, 45, "Text"],
+Cell[CellGroupData[{
+Cell[2197, 69, 100, 1, 30, "Input"],
+Cell[2300, 72, 79, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2416, 78, 6031, 167, 490, "Input"],
+Cell[CellGroupData[{
+Cell[8472, 249, 247, 4, 22, "Print"],
+Cell[8722, 255, 662, 17, 22, "Print"],
+Cell[9387, 274, 457, 10, 28, "Print"],
+Cell[9847, 286, 449, 6, 41, "Print"],
+Cell[10299, 294, 522, 12, 38, "Print"],
+Cell[10824, 308, 537, 12, 43, "Print"],
+Cell[11364, 322, 425, 10, 43, "Print"],
+Cell[11792, 334, 618, 14, 44, "Print"]
+}, Open  ]],
+Cell[12425, 351, 2213, 49, 508, "Output"]
+}, Open  ]],
+Cell[14653, 403, 94, 1, 30, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

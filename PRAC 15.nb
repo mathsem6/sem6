@@ -1,0 +1,306 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10038,        296]
+NotebookOptionsPosition[      9273,        265]
+NotebookOutlinePosition[      9621,        280]
+CellTagsIndexPosition[      9578,        277]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PRACTICAL- 15", "Title",
+ CellChangeTimes->{{3.89105644946494*^9, 3.8910564572112494`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[" HARIOM (20201022)", "Subchapter",
+ CellChangeTimes->{{3.891056463415427*^9, 3.8910564720860405`*^9}}],
+
+Cell[TextData[{
+ "Locate the poles of f(z) = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{
+     RowBox[{"5", 
+      SuperscriptBox["z", "4"]}], "+", 
+     RowBox[{"26", 
+      SuperscriptBox["z", "2"]}], "+", "5"}]], TraditionalForm]]],
+ "and specify their order"
+}], "Text",
+ CellChangeTimes->{{3.8598661487290583`*^9, 3.859866311125341*^9}, {
+  3.859867105861082*^9, 3.859867198182043*^9}, {3.8598682469804597`*^9, 
+  3.8598683382876644`*^9}, {3.859942058983389*^9, 3.859942238489703*^9}, {
+  3.859942873285816*^9, 3.859942917327693*^9}, {3.859942959609767*^9, 
+  3.859943059537343*^9}, {3.8599453382184453`*^9, 3.8599454120477877`*^9}},
+ TextAlignment->AlignmentMarker,
+ FontFamily->"Cambria",
+ FontSize->16,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "z_", "]"}], ":=", 
+   FractionBox["1", 
+    RowBox[{
+     RowBox[{"5", "*", 
+      SuperscriptBox["z", "4"]}], "+", 
+     RowBox[{"26", "*", 
+      SuperscriptBox["z", "2"]}], "+", "5"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The given function is f(z) = \>\"", ",", 
+    RowBox[{"f", "[", "z", "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"roots", "=", 
+   RowBox[{"z", "/.", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"5", "*", 
+         SuperscriptBox["z", "4"]}], "+", 
+        RowBox[{"26", "*", 
+         SuperscriptBox["z", "2"]}], "+", "5"}], "\[Equal]", "0"}], ",", 
+      "z"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<The roots of the denominator 5\!\(\*SuperscriptBox[\(z\), \(4\)]\)+26\
+\!\(\*SuperscriptBox[\(z\), \(2\)]\)+5=0 are \>\"", ",", "roots"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<The minimum power of \>\"", ",", 
+      RowBox[{"z", "-", 
+       RowBox[{"roots", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], ",", " ", 
+      "\"\< in the Laurent Series expansion of the function f about the point \
+\>\"", ",", 
+      RowBox[{"roots", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], ",", "\"\< is \>\"", ",", 
+      RowBox[{"Exponent", "[", 
+       RowBox[{
+        RowBox[{"Series", "[", 
+         RowBox[{
+          RowBox[{"f", "[", "z", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"z", ",", 
+            RowBox[{"roots", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", "5"}], "}"}]}], "]"}], ",", 
+        RowBox[{"z", "-", 
+         RowBox[{"roots", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], ",", "Min"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "4"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<The function f has simple poles at \>\"", ",", "roots"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.859945418147398*^9, 3.8599456274067645`*^9}, {
+  3.859945658656619*^9, 3.8599457577725925`*^9}, {3.859946937451044*^9, 
+  3.8599469615998864`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The given function is f(z) = \"\>", "\[InvisibleSpace]", 
+   FractionBox["1", 
+    RowBox[{"5", "+", 
+     RowBox[{"26", " ", 
+      SuperscriptBox["z", "2"]}], "+", 
+     RowBox[{"5", " ", 
+      SuperscriptBox["z", "4"]}]}]]}],
+  SequenceForm[
+  "The given function is f(z) = ", (5 + 26 $CellContext`z^2 + 
+    5 $CellContext`z^4)^(-1)],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.859946963113089*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The roots of the denominator 5\\!\\(\\*SuperscriptBox[\\(z\\), \
+\\(4\\)]\\)+26\\!\\(\\*SuperscriptBox[\\(z\\), \\(2\\)]\\)+5=0 are \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[ImaginaryI]", 
+       SqrtBox["5"]]}], ",", 
+     FractionBox["\[ImaginaryI]", 
+      SqrtBox["5"]], ",", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", 
+      SqrtBox["5"]}], ",", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      SqrtBox["5"]}]}], "}"}]}],
+  SequenceForm[
+  "The roots of the denominator 5\!\(\*SuperscriptBox[\(z\), \
+\(4\)]\)+26\!\(\*SuperscriptBox[\(z\), \(2\)]\)+5=0 are ", {
+   Complex[0, -1] 5^Rational[-1, 2], Complex[0, 1] 5^Rational[-1, 2], 
+    Complex[0, -1] 5^Rational[1, 2], Complex[0, 1] 5^Rational[1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.859946963113089*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    FractionBox["\[ImaginaryI]", 
+     SqrtBox["5"]], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\" in the Laurent Series expansion of the function \
+f about the point \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["\[ImaginaryI]", 
+     SqrtBox["5"]]}], "\[InvisibleSpace]", "\<\" is \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of ", Complex[0, 1] 5^Rational[-1, 2] + $CellContext`z, 
+   " in the Laurent Series expansion of the function f about the point ", 
+   Complex[0, -1] 5^Rational[-1, 2], " is ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.8599469631286893`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["\[ImaginaryI]", 
+      SqrtBox["5"]]}], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\" in the Laurent Series expansion of the function \
+f about the point \"\>", "\[InvisibleSpace]", 
+   FractionBox["\[ImaginaryI]", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "\<\" is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of ", Complex[0, -1] 5^Rational[-1, 2] + $CellContext`z, 
+   " in the Laurent Series expansion of the function f about the point ", 
+   Complex[0, 1] 5^Rational[-1, 2], " is ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.8599469631286893`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"\[ImaginaryI]", " ", 
+     SqrtBox["5"]}], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\" in the Laurent Series expansion of the function \
+f about the point \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+    SqrtBox["5"]}], "\[InvisibleSpace]", "\<\" is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of ", Complex[0, 1] 5^Rational[1, 2] + $CellContext`z, 
+   " in the Laurent Series expansion of the function f about the point ", 
+   Complex[0, -1] 5^Rational[1, 2], " is ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.8599469631286893`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The minimum power of \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "\[ImaginaryI]"}], " ", 
+     SqrtBox["5"]}], "+", "z"}], 
+   "\[InvisibleSpace]", "\<\" in the Laurent Series expansion of the function \
+f about the point \"\>", "\[InvisibleSpace]", 
+   RowBox[{"\[ImaginaryI]", " ", 
+    SqrtBox["5"]}], "\[InvisibleSpace]", "\<\" is \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm[
+  "The minimum power of ", Complex[0, -1] 5^Rational[1, 2] + $CellContext`z, 
+   " in the Laurent Series expansion of the function f about the point ", 
+   Complex[0, 1] 5^Rational[1, 2], " is ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.8599469631286893`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The function f has simple poles at \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[ImaginaryI]", 
+       SqrtBox["5"]]}], ",", 
+     FractionBox["\[ImaginaryI]", 
+      SqrtBox["5"]], ",", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", 
+      SqrtBox["5"]}], ",", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      SqrtBox["5"]}]}], "}"}]}],
+  SequenceForm[
+  "The function f has simple poles at ", {
+   Complex[0, -1] 5^Rational[-1, 2], Complex[0, 1] 5^Rational[-1, 2], 
+    Complex[0, -1] 5^Rational[1, 2], Complex[0, 1] 5^Rational[1, 2]}],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8599469390890474`*^9, 3.8599469631286893`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 989},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 97, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[702, 27, 108, 1, 67, "Subchapter"],
+Cell[813, 30, 749, 20, 42, "Text"],
+Cell[CellGroupData[{
+Cell[1587, 54, 2307, 64, 156, "Input"],
+Cell[CellGroupData[{
+Cell[3919, 122, 486, 13, 39, "Print"],
+Cell[4408, 137, 925, 23, 44, "Print"],
+Cell[5336, 162, 784, 18, 44, "Print"],
+Cell[6123, 182, 781, 17, 44, "Print"],
+Cell[6907, 201, 781, 17, 27, "Print"],
+Cell[7691, 220, 782, 17, 27, "Print"],
+Cell[8476, 239, 745, 20, 44, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
